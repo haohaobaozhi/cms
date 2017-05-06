@@ -15,6 +15,9 @@ gem 'rack-protection' # Protects against sessions attacks
 gem 'rack-timeout' # Limits web request time
 gem 'secure_headers' # Adds security headers to requests
 
+# API
+gem 'grape-swagger-entity' # API docs generator
+
 # Authentication and authorization
 gem 'devise_invitable' # Inviting of users
 gem 'devise_zxcvbn' # Strong passwords for users
@@ -74,6 +77,7 @@ end
 group :development, :test do
   gem 'bullet' # Detect bad database queries
   gem 'dotenv-rails' # Easy environment configuration
+  gem 'grape-swagger-rails' # API docs viewer
   gem 'pry-byebug' # Debugging
   gem 'pry-rails' # Debugging
   gem 'spring' # Quick boot
