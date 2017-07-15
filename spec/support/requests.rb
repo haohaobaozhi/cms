@@ -41,6 +41,10 @@ RSpec.shared_context 'requests' do
     send_request
     expect(response).to have_http_status expected_status
   end
+
+  def json_body
+    JSON.parse(response.body)
+  end
 end
 
 RSpec.configuration.include_context 'requests', type: :request

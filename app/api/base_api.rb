@@ -7,7 +7,7 @@ class BaseAPI < Grape::API
   add_swagger_documentation(
     doc_version: '1.0',
     info: {
-      title: 'obduk CMS API',
+      title: 'obduk CMS API'
     }
   )
 end
