@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     mount GrapeSwaggerRails::Engine, at: '/swagger'
   end
 
+  mount BaseAPI, at: '/'
+
   root 'systems#home'
 
   get '/robots', to: 'systems#robots'
