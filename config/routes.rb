@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  mount LetterOpenerWeb::Engine, at: '/emails' if Rails.env.development?
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: '/emails'
+    mount GrapeSwaggerRails::Engine, at: '/swagger'
+  end
 
   root 'systems#home'
 
